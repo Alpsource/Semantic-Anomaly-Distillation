@@ -243,7 +243,6 @@ def main():
 
     loader = DataLoader(dataset, batch_size=128, shuffle=False, num_workers=4)
     
-    # Store results here
     res_base = None
     res_dist = None
 

@@ -10,7 +10,7 @@ from tqdm import tqdm
 
 # CONFIG
 DATA_PATH = "data/raw/finetune_train.json"
-BATCH_SIZE = 64        # MobileNet is tiny, so we can use a large batch size
+BATCH_SIZE = 128        # MobileNet is tiny, so we can use a large batch size
 MAX_EPOCHS = 15         # Give it enough time to converge
 LEARNING_RATE = 1e-4    # Standard fine-tuning rate
 DEVICE = "cuda"
@@ -70,6 +70,7 @@ class FinetuneDataset(torch.utils.data.Dataset):
 def main():
     # Standard transforms (Match Distillation)
     transform = transforms.Compose([
+        transforms.Resize((224, 224)),
         transforms.ToTensor(),
         transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]),
     ])

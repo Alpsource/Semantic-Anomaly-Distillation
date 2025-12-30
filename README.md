@@ -8,6 +8,9 @@
 
 Traffic accident detection in autonomous systems requires a delicate balance between **real-time performance** and **safety-critical sensitivity**. We propose a **Joint Semantic Distillation (JSD)** framework that transfers robust *world knowledge* from a frozen **DINOv2 (ViT-Base)** teacher to a lightweight **MobileNetV3-Small** student.
 
+### Watch the Demo
+[▶️ Click here to watch the Real-Time Detection Demo (MP4)](assets/output_demo.mp4)
+
 By jointly optimizing:
 - **Binary classification loss** ($L_{BCE}$)
 - **Semantic feature alignment loss** ($L_{Cos}$)
