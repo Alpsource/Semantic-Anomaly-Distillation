@@ -15,7 +15,7 @@ By jointly optimizing:
 - **Binary classification loss** ($L_{BCE}$)
 - **Semantic feature alignment loss** ($L_{Cos}$)
 
-the distilled model achieves **high-recall accident detection on edge devices**, running at **>100 FPS** with a **3× Recall improvement** over standard training.
+the distilled model achieves **high-recall accident detection on edge devices**, running at **>100 FPS** with a **+4 Recall improvement** over standard training.
 
 ![System Architecture](assets/system_architecture.png)
 
@@ -30,7 +30,7 @@ The distilled student fundamentally shifts the decision boundary to prioritize s
 
 | Model | Accuracy | Recall | F1-Score | AUC | 
 |-------|----------|--------|----------|-----|
-| MobileNetV3 (Baseline) | **63.8%** | 22.9% | 0.301 | 0.574 |
+| MobileNetV3 (Baseline) | **63.8%** | 61.8% | 0.498 | 0.621 |
 | **Ours (Distilled)** | 56.9% | **65.7%** | **0.510** | **0.631** |
 
 ![Metric Comparison](assets/metric_comparison.png)
